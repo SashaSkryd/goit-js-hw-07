@@ -10,19 +10,18 @@
 // Категория: Животные
 // Количество элементов: 4
 
-const refs = {
-    body: document.querySelector('body'),
-    list: document.querySelector('#categories'),
-    items: document.querySelector('.item')
-}
+// const refs = {
+//     body: document.querySelector('body'),
+//     list: document.querySelector('#categories'),
+//     items: document.querySelectorAll('.item')
+// }
 
-console.log([...refs.list.children]);// почему без консоли не работает спред????
+// refs.items.forEach((el, idx) => {
+//     console.log(`количество категорий ${idx +=1}`);
+//     console.log(el.querySelector('h2').textContent)
+//     console.log(el.querySelectorAll('ul li').length);
+// })
 
-[...refs.list.children].filter((el, idx) => {
-    idx = idx  + 1
-    console.log(`В списке ${idx} категории.`);
-    console.log(el.textContent)
-})
 
 // =================================================================
 // Задание 2
@@ -77,3 +76,46 @@ console.log([...refs.list.children]);// почему без консоли не 
 //     alt: 'Group of Horses Running',
 //   },
 // ];
+
+// const list = document.querySelector('#gallery')
+
+// console.log(list);
+
+// images.map((el, i) => {
+//     list.insertAdjacentHTML("afterbegin", `<li><img class = "photo"></li>`)
+//     let photo = document.querySelector('.photo')
+//     photo.src = el.url 
+//     photo.alt = el.alt
+// })
+// =================================================================
+// Задание 4
+// Счетчик состоит из спана и кнопок, которые должны увеличивать и уменьшать значение счетчика на 1.
+
+// Создай переменную counterValue в которой будет хранится текущее значение счетчика.
+// Создай функции increment и decrement для увеличения и уменьшения значения счетчика
+// Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
+
+
+// const counterValue = document.querySelector('#value')
+
+
+// const sum = document.querySelector('[data-action="increment"]')
+// function increment(a) {return a += 1 };
+
+// sum.addEventListener('click', () => {
+//     console.log(increment(counterValue));
+    
+// })
+
+// const minus = document.querySelector('[data-action="decrement"]')
+// minus.addEventListener('click', () => {
+//     let decrement = (a) => a -= 1;
+//     console.log(decrement(counterValue));
+// })
+
+// =================================================================
+// Задание 5
+// Напиши скрипт который, при наборе текста в инпуте input#name-input (событие input), подставляет его текущее значение в span#name-output. Если инпут пустой, в спане должна отображаться строка 'незнакомец'.
+
+/* <input type="text" placeholder="Ваше имя?" id="name-input" />
+<h1>Привет, <span id="name-output">незнакомец</span>!</h1> */
