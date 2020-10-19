@@ -119,3 +119,44 @@
 
 /* <input type="text" placeholder="Ваше имя?" id="name-input" />
 <h1>Привет, <span id="name-output">незнакомец</span>!</h1> */
+
+// const area = document.querySelector('#name-input')
+// const text = document.querySelector('#name-output')
+// console.log(text);
+
+// console.log(area);
+// area.addEventListener('input', (event) => {
+//       text.textContent = event
+// })
+// =================================================================
+// Задание 6
+// Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое на правильное количество символов.
+
+// /* <input
+//   type="text"
+//   id="validation-input"
+//   data-length="6"
+//   placeholder="Введи 6 символов"
+// />
+// Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
+// Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
+// Для добавления стилей, используй CSS-классы valid и invalid.
+
+// #validation-input {
+//   border: 3px solid #bdbdbd;
+// }
+
+// #validation-input.valid {
+//   border-color: #4caf50;
+// }
+
+// #validation-input.invalid {
+//   border-color: #f44336;
+// } */
+
+// =================================================================
+// Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
+
+// <input id="font-size-control" type="range" />
+// <br />
+// <span id="text">Абракадабра!</span>
