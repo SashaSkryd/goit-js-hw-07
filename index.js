@@ -36,7 +36,7 @@
 //   'Приправы',
 // ];
 
-// const refs = {
+// const refs1 = {
 //     root: document.querySelector('body'),
 //     list: document.createElement('ul'),
 
@@ -45,7 +45,7 @@
 // ingredients.map(text => {
 //     let item = document.createElement('li')
 //     item.textContent = text
-//     refs.list.append(item)
+//     refs1.list.append(item)
 // })
 // =================================================================
 // Задание 3
@@ -78,15 +78,7 @@
 // ];
 
 // const list = document.querySelector('#gallery')
-
-// console.log(list);
-
-// images.map((el, i) => {
-//     list.insertAdjacentHTML("afterbegin", `<li><img class = "photo"></li>`)
-//     let photo = document.querySelector('.photo')
-//     photo.src = el.url 
-//     photo.alt = el.alt
-// })
+// images.map(el => list.insertAdjacentHTML("beforeend", `<li><img class = "photo" src="${el.url}" alt="${el.alt}" ></li>`))
 // =================================================================
 // Задание 4
 // Счетчик состоит из спана и кнопок, которые должны увеличивать и уменьшать значение счетчика на 1.
@@ -96,21 +88,21 @@
 // Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
 
 
-// const counterValue = document.querySelector('#value')
-
+// const span = document.querySelector('#value')
+// const counterValue = span.textContent;
 
 // const sum = document.querySelector('[data-action="increment"]')
-// function increment(a) {return a += 1 };
+// const increment = () => { span.textContent = Number(span.textContent) + 1 };
 
 // sum.addEventListener('click', () => {
-//     console.log(increment(counterValue));
+//     console.log(increment());
     
 // })
 
 // const minus = document.querySelector('[data-action="decrement"]')
 // minus.addEventListener('click', () => {
-//     let decrement = (a) => a -= 1;
-//     console.log(decrement(counterValue));
+//     const decrement = () => span.textContent -= 1;
+//     console.log(decrement());
 // })
 
 // =================================================================
@@ -122,11 +114,13 @@
 
 // const area = document.querySelector('#name-input')
 // const text = document.querySelector('#name-output')
-// console.log(text);
+// area.addEventListener('input', () => {
+//     if (area.value === '') {
+//         text.textContent = 'незнакомец'
+//     } else {
+//     text.textContent = area.value
 
-// console.log(area);
-// area.addEventListener('input', (event) => {
-//       text.textContent = event
+//     }
 // })
 // =================================================================
 // Задание 6
@@ -154,7 +148,23 @@
 //   border-color: #f44336;
 // } */
 
+
+const valid = document.querySelector('#validation-input')
+valid.addEventListener('input', () => { 
+    //   узнать количество симыолов для проверки символов нахлдязихся в инпкте
+    //  если количество введенно подходящее добавить клас валид
+    // если не подъходязае клас инвалид
+    // console.log(valid.getAttribute('data-length'));
+    console.log('zsgzwegaweg');
+    if (valid.value.length === valid.getAttribute('data-length')) {
+        valid.classList.add('valid')
+    } else {
+        valid.classList.replace('valid', 'invalid')
+    }
+})
+
 // =================================================================
+// Задание 7
 // Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
 
 // <input id="font-size-control" type="range" />
