@@ -119,7 +119,6 @@
 //         text.textContent = 'незнакомец'
 //     } else {
 //     text.textContent = area.value
-
 //     }
 // })
 // =================================================================
@@ -149,20 +148,18 @@
 // } */
 
 
-const valid = document.querySelector('#validation-input')
-valid.addEventListener('input', () => { 
-    //   узнать количество симыолов для проверки символов нахлдязихся в инпкте
-    //  если количество введенно подходящее добавить клас валид
-    // если не подъходязае клас инвалид
-    // console.log(valid.getAttribute('data-length'));
-    console.log('zsgzwegaweg');
-    if (valid.value.length === valid.getAttribute('data-length')) {
-        valid.classList.add('valid')
-    } else {
-        valid.classList.replace('valid', 'invalid')
-    }
-})
+// const valid = document.querySelector('#validation-input')
+// valid.addEventListener('input', () => { 
+//     // console.log(valid.getAttribute('data-length'));
+//     // console.log(valid.value.length);
+//     if (valid.value.length === valid.getAttribute('data-length')) {
+//         valid.classList.replace( 'validation-input.valid', 'validation-input.invalid');
+//     } else {
+//         valid.classList.replace('validation-input.invalid', 'validation-input.valid');
+//     } 
+// //         // valid.value.length !== valid.getAttribute('data-length') ? valid.id = 'validation-input.valid' : valid.id ='validation-input.invalid'
 
+// })
 // =================================================================
 // Задание 7
 // Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
@@ -170,3 +167,31 @@ valid.addEventListener('input', () => {
 // <input id="font-size-control" type="range" />
 // <br />
 // <span id="text">Абракадабра!</span>
+
+// const control = document.querySelector('#font-size-control')
+// const text1 = document.querySelector('#text')
+
+// control.addEventListener('input', getSize);
+// function getSize() { text1.style.fontSize = control.value + 'px' };
+// =================================================================
+// Задание 8 - дополнительное, выполнять не обязательно
+// Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
+
+// Создай функцию createBoxes(amount), которая принимает 1 параметр amount - число. Функция создает столько div, сколько указано в amount и добавляет их в div#boxes.
+
+// Каждый созданный div:
+
+// Имеет случайный rgb цвет фона
+// Размеры самого первого div - 30px на 30px
+// Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
+// Создай функцию destroyBoxes(), которая очищает div#boxes.
+
+// <div id="controls">
+//   <input type="number" min="0" max="100" step="1" />
+//   <button type="button" data-action="render">Создать</button>
+//   <button type="button" data-action="destroy">Очистить</button>
+// </div>
+
+// <div id="boxes"></div>
+
+
