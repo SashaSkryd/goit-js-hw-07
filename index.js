@@ -10,43 +10,43 @@
 // Категория: Животные
 // Количество элементов: 4
 
-// const refs = {
-//     body: document.querySelector('body'),
-//     list: document.querySelector('#categories'),
-//     items: document.querySelectorAll('.item')
-// }
+const refs = {
+    body: document.querySelector('body'),
+    list: document.querySelector('#categories'),
+    items: document.querySelectorAll('.item')
+}
 
-// refs.items.forEach((el, idx) => {
-//     console.log(`количество категорий ${idx +=1}`);
-//     console.log(el.querySelector('h2').textContent)
-//     console.log(el.querySelectorAll('ul li').length);
-// })
+refs.items.forEach((el, idx) => {
+    console.log(`количество категорий ${idx +=1}`);
+    console.log(el.querySelector('h2').textContent)
+    console.log(el.querySelectorAll('ul li').length);
+})
 
 
 // =================================================================
 // Задание 2
 // Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, после чего вставит все li за одну операцию в список ul.ingredients. Для создания DOM-узлов используй document.createElement().
 
-// const ingredients = [
-//   'Картошка',
-//   'Грибы',
-//   'Чеснок',
-//   'Помидоры',
-//   'Зелень',
-//   'Приправы',
-// ];
+const ingredients = [
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
+];
 
-// const refs1 = {
-//     root: document.querySelector('body'),
-//     list: document.createElement('ul'),
+const refs1 = {
+    root: document.querySelector('body'),
+    list: document.createElement('ul'),
 
-// }
+}
 
-// ingredients.map(text => {
-//     let item = document.createElement('li')
-//     item.textContent = text
-//     refs1.list.append(item)
-// })
+ingredients.map(text => {
+    let item = document.createElement('li')
+    item.textContent = text
+    refs1.list.append(item)
+})
 // =================================================================
 // Задание 3
 // Напиши скрипт для создания галлереи изображений по массиву данных.
@@ -59,26 +59,26 @@
 // Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 // Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
 
-// const images = [
-//   {
-//     url:
-//       'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-//     alt: 'White and Black Long Fur Cat',
-//   },
-//   {
-//     url:
-//       'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-//     alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
-//   },
-//   {
-//     url:
-//       'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-//     alt: 'Group of Horses Running',
-//   },
-// ];
+const images = [
+  {
+    url:
+      'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'White and Black Long Fur Cat',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Group of Horses Running',
+  },
+];
 
-// const list = document.querySelector('#gallery')
-// images.map(el => list.insertAdjacentHTML("beforeend", `<li><img class = "photo" src="${el.url}" alt="${el.alt}" ></li>`))
+const list = document.querySelector('#gallery')
+images.map(el => list.insertAdjacentHTML("beforeend", `<li><img class = "photo" src="${el.url}" alt="${el.alt}" ></li>`))
 // =================================================================
 // Задание 4
 // Счетчик состоит из спана и кнопок, которые должны увеличивать и уменьшать значение счетчика на 1.
@@ -88,22 +88,22 @@
 // Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
 
 
-// const span = document.querySelector('#value')
-// const counterValue = span.textContent;
+const span = document.querySelector('#value')
+const counterValue = span.textContent;
 
-// const sum = document.querySelector('[data-action="increment"]')
-// const increment = () => { span.textContent = Number(span.textContent) + 1 };
+const sum = document.querySelector('[data-action="increment"]')
+const increment = () => { span.textContent = Number(span.textContent) + 1 };
 
-// sum.addEventListener('click', () => {
-//     console.log(increment());
+sum.addEventListener('click', () => {
+    increment();
     
-// })
+})
 
-// const minus = document.querySelector('[data-action="decrement"]')
-// minus.addEventListener('click', () => {
-//     const decrement = () => span.textContent -= 1;
-//     console.log(decrement());
-// })
+const minus = document.querySelector('[data-action="decrement"]')
+minus.addEventListener('click', () => {
+    const decrement = () => span.textContent -= 1;
+    decrement();
+})
 
 // =================================================================
 // Задание 5
@@ -112,15 +112,15 @@
 /* <input type="text" placeholder="Ваше имя?" id="name-input" />
 <h1>Привет, <span id="name-output">незнакомец</span>!</h1> */
 
-// const area = document.querySelector('#name-input')
-// const text = document.querySelector('#name-output')
-// area.addEventListener('input', () => {
-//     if (area.value === '') {
-//         text.textContent = 'незнакомец'
-//     } else {
-//     text.textContent = area.value
-//     }
-// })
+const area = document.querySelector('#name-input')
+const text = document.querySelector('#name-output')
+area.addEventListener('input', () => {
+    if (area.value === '') {
+        text.textContent = 'незнакомец'
+    } else {
+    text.textContent = area.value
+    }
+})
 // =================================================================
 // Задание 6
 // Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое на правильное количество символов.
@@ -148,18 +148,17 @@
 // } */
 
 
-// const valid = document.querySelector('#validation-input')
-// valid.addEventListener('input', () => { 
-//     // console.log(valid.getAttribute('data-length'));
-//     // console.log(valid.value.length);
-//     if (valid.value.length === valid.getAttribute('data-length')) {
-//         valid.classList.replace( 'validation-input.valid', 'validation-input.invalid');
-//     } else {
-//         valid.classList.replace('validation-input.invalid', 'validation-input.valid');
-//     } 
-// //         // valid.value.length !== valid.getAttribute('data-length') ? valid.id = 'validation-input.valid' : valid.id ='validation-input.invalid'
+const valid = document.querySelector('#validation-input')
+valid.addEventListener('input', () => { 
+    if (valid.value.length === +valid.getAttribute('data-length')) {
+        valid.classList.add('valid');
+        valid.classList.remove('invalid');
 
-// })
+    } else {
+        valid.classList.remove('valid');
+        valid.classList.add('invalid');
+    } 
+})
 // =================================================================
 // Задание 7
 // Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
@@ -168,11 +167,11 @@
 // <br />
 // <span id="text">Абракадабра!</span>
 
-// const control = document.querySelector('#font-size-control')
-// const text1 = document.querySelector('#text')
+const control = document.querySelector('#font-size-control')
+const text1 = document.querySelector('#text')
 
-// control.addEventListener('input', getSize);
-// function getSize() { text1.style.fontSize = control.value + 'px' };
+control.addEventListener('input', getSize);
+function getSize() { text1.style.fontSize = control.value + 'px' };
 // =================================================================
 // Задание 8 - дополнительное, выполнять не обязательно
 // Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
